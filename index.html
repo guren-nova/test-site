@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>神日京国 | 認証中...</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="refresh" content="6;url=https://jpn-shinkyou.f5.si/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      background: #0d1117;
+      color: #fff;
+      font-family: 'Segoe UI', 'Noto Sans JP', sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .card {
+      background: #161b22;
+      padding: 2rem 3rem;
+      border-radius: 1.5rem;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+      text-align: center;
+      max-width: 90%;
+    }
+
+    .card h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #58a6ff;
+    }
+
+    .card p {
+      font-size: 1.1rem;
+      color: #c9d1d9;
+      margin-bottom: 2rem;
+    }
+
+    .spinner {
+      font-size: 2rem;
+      color: #58a6ff;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    footer {
+      position: absolute;
+      bottom: 1rem;
+      font-size: 0.85rem;
+      color: #8b949e;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1><i class="fas fa-shield-halved"></i> 接続認証中</h1>
+    <p>セキュリティチェックを実行しています。<br>しばらくお待ちください…</p>
+    <div class="spinner"><i class="fas fa-circle-notch"></i></div>
+  </div>
+
+  <footer>
+    &copy; 2025 神日京国 - Shinkyou National Authority
+  </footer>
+
+  <script>
+    const min = 3000, max = 5000;
+    const delay = Math.floor(Math.random() * (max - min + 1)) + min;
+    setTimeout(() => {
+      window.location.href = "https://jpn-shinkyou.f5.si/";
+    }, delay);
+  </script>
+</body>
+</html>
